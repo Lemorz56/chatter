@@ -1,9 +1,12 @@
 defmodule ChatterWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :chatter
 
-  if Application.get_env(:chatter, :sql_sandbox) do
+  if Application.compile_env(:chatter, :sql_sandbox, false) do
     plug Phoenix.Ecto.SQL.Sandbox
   end
+  # if Application.get_env(:chatter, :sql_sandbox) do
+  #   plug Phoenix.Ecto.SQL.Sandbox
+  # end
 
   # The session will be stored in the cookie and signed,
   # this means its contents can be read but not tampered with.
