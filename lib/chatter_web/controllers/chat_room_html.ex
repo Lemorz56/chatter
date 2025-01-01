@@ -8,4 +8,3 @@ defmodule ChatterWeb.ChatRoomHTML do
 
   embed_templates "chat_room_html/*"
 end
-
